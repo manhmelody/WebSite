@@ -7,7 +7,7 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" Runat="Server">
     <h1>Sản phẩm</h1>
     <p style="color:#b200ff">
-        <asp:FormView ID="FormView1" runat="server" AllowPaging="True" DataKeyNames="MaSP" DataSourceID="SqlDataSource1">
+        <asp:FormView ID="FormView1" runat="server" AllowPaging="True" DataKeyNames="MaSP" DataSourceID="SqlDataSource1" ForeColor="#CC66FF">
             <EditItemTemplate>
                 MaSP:
                 <asp:Label ID="MaSPLabel1" runat="server" Text='<%# Eval("MaSP") %>' />
