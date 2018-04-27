@@ -4,10 +4,10 @@
     
 </asp:Content>
 
-<asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
+<asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent" >
     <h3>&nbsp;</h3>
     <ol class="round">
-        <div style="width:1000px">
+        <div style="width:1000px" >
             <div style="width:700px;height:500px ; float:left">
                 <asp:Image ID="Image1" ImageUrl="~/Images/galaxy-a-2017.png"  runat="server" style="margin-left: 0px" Width="695px" Height="494px" />
             </div >

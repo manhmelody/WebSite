@@ -5,8 +5,10 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" Runat="Server">
+    
     <h1> Loại hàng
-    <asp:DetailsView ID="DetailsView1" runat="server" Height="50px" Width="125px" AllowPaging="True" AutoGenerateRows="False" DataKeyNames="MaLH" DataSourceID="SqlDataSource1">
+        <div style="color:#b200ff">
+    <asp:DetailsView ID="DetailsView1" runat="server" Height="50px" Width="125px" AllowPaging="True" AutoGenerateRows="False" DataKeyNames="MaLH" DataSourceID="SqlDataSource1" >
         <Fields>
             <asp:BoundField DataField="MaLH" HeaderText="MaLH" ReadOnly="True" SortExpression="MaLH" />
             <asp:BoundField DataField="TenLH" HeaderText="TenLH" SortExpression="TenLH" />
@@ -30,5 +32,6 @@
         </UpdateParameters>
     </asp:SqlDataSource>
         </h1>
+        </div>
 </asp:Content>
 
