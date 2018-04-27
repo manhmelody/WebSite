@@ -6,7 +6,7 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" Runat="Server">
     <h1>Sản phẩm</h1>
-    <p>
+    <p style="color:#b200ff">
         <asp:FormView ID="FormView1" runat="server" AllowPaging="True" DataKeyNames="MaSP" DataSourceID="SqlDataSource1">
             <EditItemTemplate>
                 MaSP:
