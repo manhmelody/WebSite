@@ -5,8 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" Runat="Server">
-    <h1>Sản phẩm
-        </h1>
+    <h1>Sản phẩm</h1>
     <p>
         <asp:FormView ID="FormView1" runat="server" AllowPaging="True" DataKeyNames="MaSP" DataSourceID="SqlDataSource1">
             <EditItemTemplate>
@@ -27,9 +26,6 @@
                 <br />
                 ChuThich:
                 <asp:TextBox ID="ChuThichTextBox" runat="server" Text='<%# Bind("ChuThich") %>' />
-                <br />
-                HinhAnh:
-                <asp:TextBox ID="HinhAnhTextBox" runat="server" Text='<%# Bind("HinhAnh") %>' />
                 <br />
                 <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
                 &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
@@ -53,9 +49,6 @@
                 ChuThich:
                 <asp:TextBox ID="ChuThichTextBox" runat="server" Text='<%# Bind("ChuThich") %>' />
                 <br />
-                HinhAnh:
-                <asp:TextBox ID="HinhAnhTextBox" runat="server" Text='<%# Bind("HinhAnh") %>' />
-                <br />
                 <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
                 &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
             </InsertItemTemplate>
@@ -78,15 +71,12 @@
                 ChuThich:
                 <asp:Label ID="ChuThichLabel" runat="server" Text='<%# Bind("ChuThich") %>' />
                 <br />
-                HinhAnh:
-                <asp:Label ID="HinhAnhLabel" runat="server" Text='<%# Bind("HinhAnh") %>' />
-                <br />
                 <asp:LinkButton ID="EditButton" runat="server" CausesValidation="False" CommandName="Edit" Text="Edit" />
                 &nbsp;<asp:LinkButton ID="DeleteButton" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete" />
                 &nbsp;<asp:LinkButton ID="NewButton" runat="server" CausesValidation="False" CommandName="New" Text="New" />
             </ItemTemplate>
         </asp:FormView>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString2 %>" DeleteCommand="DELETE FROM [SanPham] WHERE [MaSP] = @MaSP" InsertCommand="INSERT INTO [SanPham] ([MaSP], [MaDM_SP], [TenSP], [Donvi], [GiaSP], [ChuThich], [HinhAnh]) VALUES (@MaSP, @MaDM_SP, @TenSP, @Donvi, @GiaSP, @ChuThich, @HinhAnh)" SelectCommand="SELECT [MaSP], [MaDM_SP], [TenSP], [Donvi], [GiaSP], [ChuThich], [HinhAnh] FROM [SanPham]" UpdateCommand="UPDATE [SanPham] SET [MaDM_SP] = @MaDM_SP, [TenSP] = @TenSP, [Donvi] = @Donvi, [GiaSP] = @GiaSP, [ChuThich] = @ChuThich, [HinhAnh] = @HinhAnh WHERE [MaSP] = @MaSP">
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString3 %>" DeleteCommand="DELETE FROM [SanPham] WHERE [MaSP] = @MaSP" InsertCommand="INSERT INTO [SanPham] ([MaSP], [MaDM_SP], [TenSP], [Donvi], [GiaSP], [ChuThich]) VALUES (@MaSP, @MaDM_SP, @TenSP, @Donvi, @GiaSP, @ChuThich)" SelectCommand="SELECT [MaSP], [MaDM_SP], [TenSP], [Donvi], [GiaSP], [ChuThich] FROM [SanPham]" UpdateCommand="UPDATE [SanPham] SET [MaDM_SP] = @MaDM_SP, [TenSP] = @TenSP, [Donvi] = @Donvi, [GiaSP] = @GiaSP, [ChuThich] = @ChuThich WHERE [MaSP] = @MaSP">
             <DeleteParameters>
                 <asp:Parameter Name="MaSP" Type="Int32" />
             </DeleteParameters>
@@ -97,7 +87,6 @@
                 <asp:Parameter Name="Donvi" Type="String" />
                 <asp:Parameter Name="GiaSP" Type="Decimal" />
                 <asp:Parameter Name="ChuThich" Type="String" />
-                <asp:Parameter Name="HinhAnh" Type="Object" />
             </InsertParameters>
             <UpdateParameters>
                 <asp:Parameter Name="MaDM_SP" Type="Int32" />
@@ -105,7 +94,6 @@
                 <asp:Parameter Name="Donvi" Type="String" />
                 <asp:Parameter Name="GiaSP" Type="Decimal" />
                 <asp:Parameter Name="ChuThich" Type="String" />
-                <asp:Parameter Name="HinhAnh" Type="Object" />
                 <asp:Parameter Name="MaSP" Type="Int32" />
             </UpdateParameters>
         </asp:SqlDataSource>
