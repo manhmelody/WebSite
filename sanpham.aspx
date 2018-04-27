@@ -76,7 +76,7 @@
                 &nbsp;<asp:LinkButton ID="NewButton" runat="server" CausesValidation="False" CommandName="New" Text="New" />
             </ItemTemplate>
         </asp:FormView>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString3 %>" DeleteCommand="DELETE FROM [SanPham] WHERE [MaSP] = @MaSP" InsertCommand="INSERT INTO [SanPham] ([MaSP], [MaDM_SP], [TenSP], [Donvi], [GiaSP], [ChuThich]) VALUES (@MaSP, @MaDM_SP, @TenSP, @Donvi, @GiaSP, @ChuThich)" SelectCommand="SELECT [MaSP], [MaDM_SP], [TenSP], [Donvi], [GiaSP], [ChuThich] FROM [SanPham]" UpdateCommand="UPDATE [SanPham] SET [MaDM_SP] = @MaDM_SP, [TenSP] = @TenSP, [Donvi] = @Donvi, [GiaSP] = @GiaSP, [ChuThich] = @ChuThich WHERE [MaSP] = @MaSP">
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString2 %>" DeleteCommand="DELETE FROM [SanPham] WHERE [MaSP] = @MaSP" InsertCommand="INSERT INTO [SanPham] ([MaSP], [MaDM_SP], [TenSP], [Donvi], [GiaSP], [ChuThich]) VALUES (@MaSP, @MaDM_SP, @TenSP, @Donvi, @GiaSP, @ChuThich)" SelectCommand="SELECT [MaSP], [MaDM_SP], [TenSP], [Donvi], [GiaSP], [ChuThich] FROM [SanPham]" UpdateCommand="UPDATE [SanPham] SET [MaDM_SP] = @MaDM_SP, [TenSP] = @TenSP, [Donvi] = @Donvi, [GiaSP] = @GiaSP, [ChuThich] = @ChuThich WHERE [MaSP] = @MaSP">
             <DeleteParameters>
                 <asp:Parameter Name="MaSP" Type="Int32" />
             </DeleteParameters>
